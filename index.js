@@ -50,7 +50,7 @@ restService.post("/audio", function(req, res) {
   var speech = "";
   switch (req.body.result.parameters.AudioSample.toLowerCase()) {
     //Speech Synthesis Markup Language 
-    case "music one":
+   /* case "music one":
       speech =
         '<speak><audio src="https://actions.google.com/sounds/v1/cartoon/slide_whistle.ogg">did not get your audio file</audio></speak>';
       break;
@@ -126,10 +126,9 @@ restService.post("/audio", function(req, res) {
       speech =
         '<speak><say-as interpret-as="telephone" format="1">(781) 771-7777</say-as> </speak>';
       break;
-    // https://www.w3.org/TR/2005/NOTE-ssml-sayas-20050526/#S3.3
+    // https://www.w3.org/TR/2005/NOTE-ssml-sayas-20050526/#S3.3*/
     case "alternate":
-      speech =
-        '<speak>IPL stands for <sub alias="indian premier league">IPL</sub></speak>';
+      speech ='<speak>IPL stands for <sub alias="indian premier league">IPL</sub></speak>';
       break;
   }
   return res.json({
